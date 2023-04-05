@@ -5,26 +5,26 @@ Map of Bikepaths in and around Wuerzburg
 The goal of this analysis is finding biking routes around Wuerzburg which are also accessible by train. To improve the experience during tours a layer of Beergardens and Nature Areas is included. 
 The first step of creating a thematic map with bikepaths around an area is to get all the necessary data. 
 
-Overview other the Steps of the Workflow:
+## Overview other the Steps of the Workflow:
 ![FlowchartBikepaths](https://user-images.githubusercontent.com/116875684/230120355-2816ad37-c80a-4d56-bb3c-866958b741b2.PNG)
 
-The following data is used to create a map of the region around Wuerzburg:
+### The following data is used to create a map of the region around Wuerzburg:
 
-- SRTM:	Raster	(https://dwtkns.com/srtm/)
+- SRTM:	[Raster](https://dwtkns.com/srtm/)
 
-- Administrative border of Wuerzburg:	Shape (Polygons)	(https://gdz.bkg.bund.de/index.php/default/open-data.html)
+- Administrative border of Wuerzburg:	[Shape (Polygons)](https://gdz.bkg.bund.de/index.php/default/open-data.html)
 
-- Bikepaths:	Shape (Lines)	(https://opendata-esri-de.opendata.arcgis.com/datasets/esri-de-content::radrouten-osm/explore?location=51.046961%2C10.444122%2C7.69)
+- Bikepaths:	[Shape (Lines)](https://opendata-esri-de.opendata.arcgis.com/datasets/esri-de-content::radrouten-osm/explore?location=51.046961%2C10.444122%2C7.69)
 
-- DB Railways:	Shape (Lines)	(https://data.deutschebahn.com/dataset.groups.datasets.html)
+- DB Railways:	[Shape (Lines)](https://data.deutschebahn.com/dataset.groups.datasets.html)
 
-- DB Train Stations:	Shape (Points)	(https://data.deutschebahn.com/dataset.groups.datasets.html)
+- DB Train Stations:	[Shape (Points)](https://data.deutschebahn.com/dataset.groups.datasets.html)
 
-- Beergardens:	Shape (Points)	(http://overpass-turbo.eu/)
+- Beergardens:	[Shape (Points)](http://overpass-turbo.eu/)
 
-- Corine Landcover:	Shape (Polygons)	(https://land.copernicus.eu/pan-european/corine-land-cover)
+- Corine Landcover:	[Shape (Polygons)](https://land.copernicus.eu/pan-european/corine-land-cover)
 
-- Water Bodies:	Shape (Polygons)	(https://opendata-esri-de.opendata.arcgis.com/datasets/esri-de-content::dlm250-gew%C3%A4sserfl%C3%A4chen/explore?location=51.127186%2C10.469409%2C7.66)
+- Water Bodies:	[Shape (Polygons)](https://opendata-esri-de.opendata.arcgis.com/datasets/esri-de-content::dlm250-gew%C3%A4sserfl%C3%A4chen/explore?location=51.127186%2C10.469409%2C7.66)
 
 
 To get the desired area, the City Boundaries of Wuerzburg are buffered using the Buffer tool. Then all the shape files are clipped to the buffer’s extent. To get the natural areas from the Corina Landcover dataset the natural grassland, vineyards and forests are extracted.
@@ -38,7 +38,7 @@ Further helpful tools when planning the ride are Road Slope and Terrain Profile.
 ![ExampleRouteCro](https://user-images.githubusercontent.com/116875684/230119534-d539a6ec-f9c8-410f-b355-a82755bbb621.png)
 
 
-Plug-Ins used in this workflow: 
+### Plug-Ins used in this workflow: 
 -	Bestagon (https://github.com/KonstiDE/Bestagon.git)
 -	MMQGIS
 -	Profile Tool
